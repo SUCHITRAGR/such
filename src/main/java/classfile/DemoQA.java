@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 
 public class DemoQA {
      WebDriver driver;
@@ -36,17 +37,18 @@ public class DemoQA {
         JavascriptExecutor JS = (JavascriptExecutor) driver;
         JS.executeScript("window.scrollBy(0,500)", "");
         driver.findElement(By.id("submit")).click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
         JavascriptExecutor JE=(JavascriptExecutor) driver;
         JE.executeScript("window.scrollBy(0,-5000)","");
         Thread.sleep(2000);
         driver.findElement(By.xpath("//li[@class=\"btn btn-light active\"]")).click();
     }
-//public void checkbox() throws InterruptedException {
-      //  Thread.sleep(2000);
-       // JavascriptExecutor JE=(JavascriptExecutor) driver;
-      //  JE.executeScript("window.scrollBy(0,-5000)","");
-//}
+public void checkbox() throws InterruptedException {
+      Thread.sleep(2000);
+        JavascriptExecutor JE=(JavascriptExecutor) driver;
+      JE.executeScript("window.scrollBy(0,-5000)","");
+      driver.findElement(By.id("item-1")).click();
+}
 
     }
 

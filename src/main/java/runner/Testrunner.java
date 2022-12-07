@@ -10,6 +10,8 @@ import org.junit.runner.RunWith;
         glue = {"Mystepdef"},
         tags = "@Regression",
         plugin = {"pretty",
+                "html:target/cucumber-report/report.html",
+                "json:target/cucumber-report/report.json",
           "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 
 

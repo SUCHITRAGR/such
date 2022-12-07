@@ -11,15 +11,15 @@ public class demoele {
     @Given("Elments fuctionality")
     public void elmentsFuctionality() throws AWTException, InterruptedException {
         da.LOGIN();
-//      da.textbox();
-    //  da.checkbox();
+//    da.textbox();
+     // da.checkbox();
 
     }
 
 
     @Given("click on check box")
     public void clickOnCheckBox() throws InterruptedException {
-     //  da.checkbox();
+       da.checkbox();
     }
 
     @Given("click on radio button")
